@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DuolingoStreak</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/duolingo-streak.css">
+  </head>
+  <body>
+    <script>
+      window.DuolingoStreakENV = {{ENV}};
+      window.EmberENV = window.DuolingoStreakENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/duolingo-streak.js"></script>
+    <script>
+      window.DuolingoStreak = require('duolingo-streak/app')['default'].create(DuolingoStreakENV.APP);
+    </script>
+  </body>
+</html>
