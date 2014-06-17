@@ -1,6 +1,7 @@
 {
   "name": "duolingo-streak",
   "version": "0.0.0",
+  "description": "Duolingo streak helper",
   "private": true,
   "directories": {
     "doc": "doc",
