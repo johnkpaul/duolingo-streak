@@ -3,13 +3,11 @@ var authToken = require('../config/secrets.js').twilio_token;
 var from = require('../config/secrets.js').from;
 
 var client = require('twilio')(accountSid, authToken);
-var request = require('./request');
-
-var Promise = require("bluebird");
+var BlueBird = require("bluebird");
 
 module.exports = {
   send: function send(to, message){
-    return new Promise(function(resolve, reject){
+    return new BlueBird(function(resolve, reject){
        client.messages.create({
          body: message,
          to: to,
@@ -22,4 +20,4 @@ module.exports = {
        }); 
     });
   }
-}
+};

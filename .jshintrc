@@ -2,9 +2,11 @@
   "predef": {
     "document": true,
     "window": true,
-    "DuolingoStreakENV": true
+    "DuolingoStreakENV": true,
+    "require": true
   },
   "browser" : true,
+  "node" : true,
   "boss" : true,
   "curly": true,
   "debug": false,

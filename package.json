@@ -12,7 +12,8 @@
     "build": "ember build",
     "test": "ember test",
     "decrypt_conf": "openssl cast5-cbc -d -in config/secrets.json.cast5 -out config/secrets.json",
-    "encrypt_conf": "openssl cast5-cbc -e -in config/secrets.json -out config/secrets.json.cast5"
+    "encrypt_conf": "openssl cast5-cbc -e -in config/secrets.json -out config/secrets.json.cast5",
+    "hint": "jshint duo"
   },
   "repository": "https://github.com/stefanpenner/ember-cli",
   "engines": {
@@ -26,7 +27,8 @@
     "broccoli-ember-hbs-template-compiler": "^1.5.0",
     "express": "^4.1.1",
     "body-parser": "^1.2.0",
-    "glob": "^3.2.9"
+    "glob": "^3.2.9",
+    "jshint": "~2.5.1"
   },
   "dependencies": {
     "request": "~2.36.0",
