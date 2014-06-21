@@ -11,7 +11,7 @@
     "start": "ember server",
     "build": "ember build",
     "test": "ember test",
-    "decrypt_conf": "openssl cast5-cbc -d -in config/secrets.json.cast5 -out config/secrets.json", 
+    "decrypt_conf": "openssl cast5-cbc -d -in config/secrets.json.cast5 -out config/secrets.json",
     "encrypt_conf": "openssl cast5-cbc -e -in config/secrets.json -out config/secrets.json.cast5"
   },
   "repository": "https://github.com/stefanpenner/ember-cli",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "request": "~2.36.0",
-    "twilio": "~1.6.0"
+    "twilio": "~1.6.0",
+    "bluebird": "~2.1.2"
   }
 }
