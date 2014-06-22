@@ -15,10 +15,10 @@ users.forEach(function(user){
       });
     }
     else {
-      client.send(to, "Good job Duolingoing!").then(function(){
+      client.send(to, "Good job Duolingoing!").then(function(message){
         console.log(JSON.stringify(message));
         console.log('Be proud of' + user.duolingo_handle);
-      });;
+      });
     }
   });
 
