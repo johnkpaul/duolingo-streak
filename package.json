@@ -32,8 +32,11 @@
     "ember-cli-esnext": "0.0.2"
   },
   "dependencies": {
+    "bluebird": "~2.1.2",
+    "lowdb": "^1.0.0",
+    "puppeteer": "^1.4.0",
     "request": "~2.36.0",
-    "twilio": "~1.6.0",
-    "bluebird": "~2.1.2"
+    "string-similarity": "^1.2.0",
+    "twilio": "~1.6.0"
   }
 }
