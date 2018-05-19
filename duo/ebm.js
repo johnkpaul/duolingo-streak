@@ -21,6 +21,7 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
     await page.goto('https://www.facebook.com/HM4HBNY/posts_to_page/');
 
+    await delay(4000);
     text = await page.evaluate(() => {
       return document.getElementById('pages_posts_to_page_pagelet').textContent;
     });
@@ -50,4 +51,9 @@ function stringsAreDifferent(oldValue, newValue){
   
   return similarity < .97;
 
+}
+function delay(time) {
+   return new Promise(function(resolve) { 
+       setTimeout(resolve, time)
+   });
 }
