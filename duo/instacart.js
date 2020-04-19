@@ -2,6 +2,8 @@
 var request = require('./request');
 var client = require('./twilio');
 var fetch = require('node-fetch');
+var bunyan = require('bunyan');
+var log = bunyan.createLogger({name: 'instacart'});
 
 var users = require('../config/secrets.js').users;
 var aldiCookie = require('../config/secrets.js').instacart.aldi.cookie;
@@ -24,11 +26,12 @@ var aldiRes =  fetch("https://shop.aldi.us/v3/containers/aldi/next_gen/retailer_
 });
 aldiRes.then(res => res.json())
     .then(json => {
-        console.log(json)
+        log.info(json)
 	    var data = json.container.modules[0]
 	    var id = data.id;
 	    if(!id.includes("errors_no_availability")){
 
+            log.info(JSON.stringify(json));
 
 	    users.forEach(function(user){
 	     var to = user.phone_number;
@@ -36,14 +39,14 @@ aldiRes.then(res => res.json())
 
 		  client.send(to, "Aldi has more availability")
                       .then(function(message){
-		   console.log(JSON.stringify(json));
+		   log.info("text message sent", message);
 		});
 
 	    });
 
 
 	    }
-}).catch((e) => console.log(e))
+}).catch((e) => log.error(e))
 /*
 var costcoRes = fetch("https://sameday.costco.com/v3/containers/costco/next_gen/retailer_information/content/delivery?source=web&cache_key=000c4b-1529-f-53e", {
     "credentials": "include",

@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "bluebird": "~2.1.2",
+    "bunyan": "^1.8.12",
     "lowdb": "^1.0.0",
     "node-fetch": "^2.6.0",
     "puppeteer": "^1.4.0",
