@@ -37,7 +37,7 @@
     "lowdb": "^1.0.0",
     "node-fetch": "^2.6.0",
     "puppeteer": "^1.4.0",
-    "request": "~2.36.0",
+    "request": "~2.88.2",
     "string-similarity": "^1.2.0",
     "twilio": "~1.6.0"
   }
